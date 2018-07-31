@@ -2,7 +2,7 @@
 const registerCreator = () => {
 
 
-  visitsCreate = firebase.database().ref('users/' + user.uid + +'/visits'); +
+  visitsCreate = firebase.database().ref('users/' + user.uid + '/visits'); +
   visitsCreate.push({
     rut: rutVisit,
     nameVisit: nameVisit,
@@ -32,3 +32,7 @@ const drawRegister = () => {
     });
 
 };
+
+const photoVisit = () => {
+
+}
