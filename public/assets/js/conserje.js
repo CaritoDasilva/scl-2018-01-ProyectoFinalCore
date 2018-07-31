@@ -16,15 +16,19 @@ const registerCreator = () => {
 }
 
 const drawRegister = () => {
-  messageContainer.innerHTML = '';
+  const table = document.getElementById('tabla');
+  table.innerHTML = '';
   visitsCreate = firebase.database().ref('users/' + visitsCreate + +'/visits')
     .on('child_added', (newVisit) => {
 
-      messageContainer.innerHTML += `
-        <p>Nombre : ${newVisit.val().rut}</p>
-        <p>Foto:${newVisit.val().visitPhoto}</p>
-        <p>Hora:${newVisit.val().createdOn}</p>
-        <p>Oficina de Destino:${newVisit.val().goTo}</p>`;
+      table.innerHTML += `
+      <tr>
+        <th scope="row"></th>
+        <td>${newVisit.val().rut}</td>
+        <td>${newVisit.val().visitPhoto}%</td>
+        <td>${newVisit.val().createdOn}%</td>
+        <td>${newVisit.val().goTo}%</td>
+      </tr>`;
     });
 
 };
