@@ -39,6 +39,11 @@
     </div>
   </section>
   <!--RECEPCIONISTA-->
+  <!-- foto!!!!! -->
+  <video id="video"></video>
+  <button id="startbutton">Sonríe!</button>
+  <canvas id="canvas"></canvas>
+  <img src="assets/css/img/avatar.student.gif" id="photo" alt="photo">
   <!-- formulario para datos de tabla-->
   <section id="sectionRecepcionista">
     <section>
@@ -96,6 +101,7 @@
             <table id="tableName" class="table">
               <thead>
                 <tr>
+                  <input type="file" accept="image/*" capture="camera" i>
                   <th scope="col"># Foto</th>
                   <th scope="col"># Nombre</th>
                   <th scope="col"># Correo</th>
@@ -190,10 +196,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
   <script src="https://cdn.emailjs.com/dist/email.min.js" type="text/javascript"></script>
   <!--ENLACE PARA ARCHIVO JS ENVIO MAIL-->
-  <script src="/public/assets/js/enviocorreo.js"></script>
+  <script src="assets/js/enviocorreo.js"></script>
   <script src="assets/js/login.js"></script>
-  <script src="app.js"></script>
-  <script src="./assets/js/conserje.js"></script>
+  <script src="assets/js/conserje.js"></script>
+  <script src="assets/js/admin.js"></script>
+  <script src="assets/js/tabla.js"></script>
+  <script src="assets/js/users.js"></script>
+  <script src="assets/js/residente.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/photo.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
   <script src="https://cdn.emailjs.com/dist/email.min.js" type="text/javascript"></script>
 
