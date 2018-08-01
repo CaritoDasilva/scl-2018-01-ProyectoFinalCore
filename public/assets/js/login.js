@@ -1,3 +1,4 @@
+let user = null;
 initApp = function () {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {

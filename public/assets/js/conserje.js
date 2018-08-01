@@ -1,16 +1,20 @@
 // Se crea función que va a subir el registro a la Database
 const registerCreator = () => {
+  const nameVisit = document.getElementById('nombre').value;
+  const rut = document.getElementById('email').value;
+  // const visitPhoto = document.getElementById('foto').value;
+  const createdOn = document.getElementById('fecha').value;
+  const goTo = document.getElementById('')
 
 
-  visitsCreate = firebase.database().ref('users/' + user.uid + '/visits'); +
+  visitsCreate = firebase.database().ref('users/' + user.uid + +'/visits'); +
   visitsCreate.push({
-    rut: rutVisit,
+    rut: rut,
     nameVisit: nameVisit,
     visitPhoto: visitPhoto,
     createdOn: user.metadata.createdAt || new Date(),
     uid: user.uid,
-    goTo: goTo,
-    emailVisit: emailVisit
+    goTo: goTo
   });
 
 }
@@ -32,7 +36,3 @@ const drawRegister = () => {
     });
 
 };
-
-const photoVisit = () => {
-
-}
